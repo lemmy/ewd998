@@ -1,0 +1,26 @@
+{
+  "name": "TLA+ EWD998",
+
+  // Install TLA+ and GraphViz extension
+  "extensions": [
+    //"alygin.vscode-tlaplus",
+    "efanzh.graphviz-preview",
+    "tintinweb.graphviz-interactive-preview",
+    "cssho.vscode-svgviewer",
+    "tomoki1207.pdf",
+    "mhutchie.git-graph"
+  ],
+
+  // - Do not automatically update extensions (E.g. better-code ext is patched for TLA+)
+  // - Use Java GC that works best with TLC.
+  // - https://github.com/alygin/vscode-tlaplus/wiki/Automatic-Module-Parsing
+  "settings": {
+    "extensions.autoUpdate": false,
+    "editor.minimap.enabled": false,
+    "tlaplus.tlc.statisticsSharing": "share",
+    "tlaplus.java.options": "-XX:+UseParallelGC",
+    "[tlaplus]": {"editor.codeActionsOnSave": {"source": true} }
+    },
+
+  "postCreateCommand": "bash -i .devcontainer/install.sh"
+}
