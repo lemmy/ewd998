@@ -48,4 +48,18 @@ ASSUME NIsPosNat == N \in Nat \ {0}
 Node == 0 .. N-1                           \* == pp'ed as ≜
 
 
+\* * Contrary to constants above, variables may change value in a behavior:
+ \* * The value of active may be 23 in one state and "frob" in another.
+ \* * For EWD998, active will maintain the activation status of our nodes,
+ \* * while pending counts the in-flight messages from other nodes that a
+ \* * node has yet to receive.
+VARIABLES 
+  active,               \* activation status of nodes
+  pending               \* number of messages pending at a node
+
+\* * A definition that lets us refer to the spec's variables (more on it later).
+vars == << active, pending >>
+
+-----------------------------------------------------------------------------
+
 =============================================================================
