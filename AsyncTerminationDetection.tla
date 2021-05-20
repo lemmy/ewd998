@@ -62,4 +62,27 @@ vars == << active, pending >>
 
 -----------------------------------------------------------------------------
 
+\* * Initially, all nodes are active and no messages are pending.
+Init ==
+
+-----------------------------------------------------------------------------
+
+\* * Each one of the actions below represent atomic transitions, i.e., define
+ \* * the next state of the current behavior (a state is an assignment of
+ \* * values to variables). Two or more actions do *not* happen simultaneously;
+ \* * if we want to e.g. model things to happen at two nodes at once, we are free
+ \* * to choose an appropriate level of granularity for those actions.
+
+\* * Node i terminates.
+Terminate(i) ==
+    UNCHANGED vars \* Short-hand saying that the variables do not change.
+
+\* * Node i sends a message to node j.
+SendMsg(i, j) ==
+    UNCHANGED vars
+
+\* * Node I receives a message.
+Wakeup(i) ==
+    UNCHANGED vars
+
 =============================================================================
