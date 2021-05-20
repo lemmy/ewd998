@@ -64,3 +64,7 @@ Instead of modeling message channels, let alone modeling the transport layer, we
 Please switch to [AsyncTerminationDetection.tla](AsyncTerminationDetection.tla) and read its comments.
 
 [^2] It's difficult to (efficiently) count pending messages in an implementation. In a TLA+ spec, we don't care about that notion of efficiency.  Also, all variables are global.
+
+#### v02b: Next-state relation
+
+The spec AsyncTerminationDetection is now in a stage where it makes sense to check what the set of behaviors are that it allows.  Unfortunately, we haven't defined the values for the parameters of the three actions.  Let's fix that.

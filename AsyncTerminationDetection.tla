@@ -113,4 +113,21 @@ Wakeup(i) ==
     /\ active' = [active EXCEPT ![i] = TRUE]
     /\ pending' = [pending EXCEPT ![i] = @ - 2]
 
+-----------------------------------------------------------------------------
+
+\* * The next-state relation should somehow plug concrete values into the 
+ \* * (sub-) actions Terminate, SendMsg, and Wakeup.  For the moment, lLet's assume
+ \* * N = 4 and plug the values in explicitly.
+Next ==
+        \* TODO With a next-state relation, the spec is accepted by TLC (note AsyncTerminationDetection.cfg).
+         \* TODO Right-click the spec editor and press "Check model with TLC".  Alternatively, you can run
+         \* TODO "tlc AsyncTerminationDetection" on the terminal.  What do you see and how can you fix it?
+        /\ Terminate(0)
+        /\ Terminate(1)
+        /\ Terminate(2)
+        /\ Terminate(3)
+        /\ Wakeup(0)
+        /\ Wakeup(1)
+        \* Rest omitted.
+
 =============================================================================
