@@ -41,4 +41,11 @@ ASSUME NIsPosNat == N \in Nat \ {0}
  \* TODO 23 \notin {23} \ {23}
  \* TODO 10 \in 1..10
 
+\* * A definition Id == exp defines Id to be synoymous with an expression exp.
+ \* * Here, we define Node to be synoymous with the set of naturals numbers
+ \* * 0 to N-1.  Semantically, Node is going to represent the ring of nodes.
+ \* * Note that the definition Node is a zero-arity (parameter-less) operator.
+Node == 0 .. N-1                           \* == pp'ed as ≜
+
+
 =============================================================================
