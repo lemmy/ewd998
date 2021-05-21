@@ -24,23 +24,6 @@ CONSTANT N
  \* * upon startup.
 ASSUME NIsPosNat == N \in Nat \ {0}
 
-\* TODO Fire up the TLA+ repl (`tlcrepl` in the Terminal > New Terminal) and 
- \* TODO find out what TLC returns for the following expressions:
- \* TODO 23 = "frob"
- \* TODO 23 # "frob"                       \* # is pretty-printed as ≠
- \* TODO {1,2,2,3,3} = {3,1,1,2,3,1}
- \* TODO 1 \div 4
- \* TODO 1 \div 0
- \* TODO {1,2,3} \cap {2,3,4}              \* \cap pp'ed as ∩
- \* TODO {1,2,3} \cup {2,3,4}              \* \cap pp'ed as ∪
- \* TODO {1,2,3} \ {2,3,4}
- \* TODO 23 \in {0}                        \* \in pp'ed as ∈
- \* TODO 23 \in {23, "frob"}
- \* TODO 23 \in {23} \ 23
- \* TODO 23 \in {23} \ {23}
- \* TODO 23 \notin {23} \ {23}
- \* TODO 10 \in 1..10
-
 \* * A definition Id == exp defines Id to be synoymous with an expression exp.
  \* * Here, we define Node to be synoymous with the set of naturals numbers
  \* * 0 to N-1.  Semantically, Node is going to represent the ring of nodes.
@@ -76,6 +59,15 @@ Init ==
      \* * even infinite ones: [n \in Nat |-> n]).
     \* * /\ is logical And (&& in programming). Conjunct lists usually make it easier
      \* * to read. However, indentation is significant!
+    \* * So far, the initial predicate defined a single state.  That seems natural as
+     \* * most programs usually start with all variables initialized to some fixed
+     \* * value.  In a spec, we don't have to be this strict.  Instead, why not let
+     \* * the system start from any (type-correct) state?
+     \* * Besides, syntax to define a specific function, TLA+ also has syntax to define
+     \* * a set of functions mapping from some set S (the domain) to some other set T:
+     \* *   [ S -> T ] or, more concretely:  [ {0,1,2,3} -> {TRUE, FALSE} ]
+    \* TODO Rewrite Init such that the system can "start" in any state. If you want to
+     \* TODO look more at functions and functions sets, open F.tla.
     /\ active = [ n \in Node |-> TRUE ]
     /\ pending = [ n \in Node |-> 0 ]
 
