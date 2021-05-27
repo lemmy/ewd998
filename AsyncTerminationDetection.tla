@@ -211,11 +211,5 @@ Stable ==
      \* * way around.
     \* * Phew, we have a high-level design (and you learned a lot about TLA+). Let's
      \* * move to the next level.  Except, one should always be suspicious of success...
-    \* TODO Run TLC in simulation mode where is randomly generates behaviors up to a given
-     \* TODO limit or terminated manually (whatever comes first).  We don't have to generate
-     \* TODO many behaviors, but we want the simulator to generate statistics for the action
-     \* TODO transitions:  "... -simulate num=10000,stats=basic ...".
-     \* TODO What do you see if you open the generated GraphViz file
-     \* TODO MCAsyncTerminationDetection_actions.dot  ?
     [](terminationDetected => []terminated)
 =============================================================================
