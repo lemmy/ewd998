@@ -160,4 +160,17 @@ Next ==
         \* ? Is it correct to let node i send a message to node j with i = j?
         \/ SendMsg(i, j)
 
+Stable ==
+    \* * With the addition of the auxiliary variable  terminationDetected  and
+     \* * the action  DetectTermination  , we can check that our (ultra) high-level
+     \* * design achieves termination detection.
+    \* TODO a) State that  terminated  implies  terminationDetected
+     \* TODO   If you want to refresh  what implication is, open  O.tla
+     \* TODO b) Check the property  Stable  with TLC.  Does it hold?
+     \* TODO c) What happens if the definition of  termination  on line 59 is
+     \* TODO    changed to  FALSE  ?
+     \* TODO d) Likewise, what happens if the definition of  MCInit  is changed
+     \* TODO    such that  terminationDetected  non-deterministically is  FALSE
+     \* TODO    or  terminationDetected?
+    TRUE \* TODO Replace me!
 =============================================================================
