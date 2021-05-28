@@ -212,4 +212,22 @@ Stable ==
     \* * Phew, we have a high-level design (and you learned a lot about TLA+). Let's
      \* * move to the next level.  Except, one should always be suspicious of success...
     [](terminationDetected => []terminated)
+
+-----------------------------------------------------------------------------
+
+\* * It is usually a good idea to check a couple of non-properties, i.e., properties that
+ \* * we expect to be violated.  We will use the behavior that violates the non-property
+ \* * as a sanity check.
+ \* * So far, our spec has  TypeOK  that assert the "types" of the variables and  Stable
+ \* * that asserts that   terminationDetected  can only be true, iff  terminated  is true.
+ \* * In TLA, we can also assert that (sub-)actions occur in a behavior; after all, it's
+ \* * the Temporal Logic of *Actions*.  :-)  A formula,  [A]_v  with  A  an action holds
+ \* * for a behavior if ever step (pair of states) is an  [A]_v  step.  For the moment,
+ \* * we will ignore the subscript  _v  and simply write  _vars instead of if:  [A]_vars.
+ \* *
+ \* TODO Please state an action property  OnlyTerminating  that asserts that the  Terminate
+ \* TODO action always occurs at each step of the behavior.  The property  OnlyTerminating
+ \* TODO will clearly be violated, but we are sanity checking anyway...
+OnlyTerminating ==
+    TRUE \* TODO Replace me!
 =============================================================================
