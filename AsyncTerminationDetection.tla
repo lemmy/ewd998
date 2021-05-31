@@ -280,4 +280,14 @@ Terminates ==
      \* * a state  t  such that the transition  s -> t  is an A step.
     []ENABLED [Next]_vars
     
+
+\* * In  Terminates  , we asserted that every step is a  Next  step, or all variables remain
+ \* * unchange:  Next \/ vars' = vars  .  Sometime, we wish to assert that all or some steps
+ \* * are an  A  step (for an action A), and some variables change. In other words, we wish
+ \* * to assert  A /\ vars' # vars  (which is equivalent to   ~(~A \/ vars' = vars)  ).  TLA
+ \* * has dedicated syntax for this, which is  <<A>>_v   where  v  is usually  vars  but can
+ \* * be any state function.
+\* TODO Does  []ENABLED <<Next>>_vars  hold for  Spec  ?
+AngleNextSubVars ==
+    []ENABLED <<Next>>_vars
 =============================================================================
