@@ -42,4 +42,12 @@ PROVE [A]_v <=> A \/ v' = v  OBVIOUS
 THEOREM ASSUME NEW ACTION A, NEW VARIABLE v 
 PROVE <<A>>_v <=> A /\ v' # v  OBVIOUS 
 
+------------------
+\* Dual Box and Diamond operators
+THEOREM ASSUME NEW F 
+PROVE <>F <=> ~[]~F  OBVIOUS 
+
+THEOREM ASSUME NEW F 
+PROVE ~<>F <=> []~F  OBVIOUS 
+
 ====
