@@ -47,5 +47,9 @@ sudo apt-get install -y z3 libz3-java
 sudo apt-get install -y --no-install-recommends texlive-latex-recommended
 #sudo apt-get install -y r-base
 
+## Install TLA+ Toolbox
+wget https://github.com/tlaplus/tlaplus/releases/download/v1.8.0/TLAToolbox-1.8.0.deb -P /tmp
+sudo dpkg -i /tmp/TLAToolbox-1.8.0.deb
+
 ## Activate the aliases above
 source ~/.bashrc
