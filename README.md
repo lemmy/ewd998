@@ -1,3 +1,14 @@
+# Repository A Has Moved
+
+**IMPORTANT NOTICE:**
+
+As of May 2022, this repository has been migrated to a [new location](https://github.com/tlaplus-workshops/ewd998/). The development, maintenance, and distribution of the project will now be done from the new repository at https://github.com/tlaplus-workshops/ewd998/.
+
+Please update your bookmarks, clones, and remotes to the new repository location.
+
+
+--------
+
 # ewd998
 Experience TLA+ in action by specifying distributed termination detection on a ring, [due to Shmuel Safra](https://www.cs.utexas.edu/users/EWD/ewd09xx/EWD998.PDF).  Each [git commit](https://github.com/lemmy/ewd998/commits/) introduces a new TLA+ concept.  Go back to the very first commit to follow along!
 
