@@ -1,4 +1,4 @@
-# Repository A Has Moved
+# Repository Has Moved
 
 **IMPORTANT NOTICE:**
 
